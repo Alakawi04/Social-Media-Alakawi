@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="welcome-screen" class="welcome-screen">
+        <h1 class="welcome-text">Welcome</h1>
+    </div>       
+
+
+    <div class="bat bat-1">🦇</div>
+    <div class="bat bat-2">🦇</div>
+    <div class="bat bat-3">🦇</div>
+    <div class="bat bat-4">🦇</div>
+    <div class="bat bat-5">🦇</div>
+    <div class="bat bat-6">🦇</div>
+    <div class="bat bat-7">🦇</div>
+    
+    <div id="main-content" class="container" style="display: none;">
+        <div class="profile">
+            <img src="alakawii.jpeg" alt="Profile Picture" class="profile-image">
+            <h1>ALAKAWI</h1>
+            <p>I'm a passionate programmer skilled in:</p>
+            <h3 class="skills-list" style="display: none;">
+                <h3>🌐 HTML, CSS, JS</h3>
+                <h3>💻 Java</h3>
+                <h3>🐍 Python</h3>
+                <h3>🛠️ Lua</h3>
+            </h3>
+            <p>Currently studying Artificial Intelligence at Al-Zaytouna University.</p>
+            <p>I'm also a YouTuber sharing my programming journey!</p>
+        </div>
+        <div class="social-buttons">
+            <button onclick="window.open('https://github.com/Alakawi04', '_blank')"><i class="fab fa-github"></i> Github</button>
+            <button onclick="window.open('https://www.youtube.com/@alakawi', '_blank')"><i class="fab fa-youtube"></i> Youtube</button>
+            <button onclick="window.open('https://www.instagram.com/al_akawi?igsh=OGQ5ZDc2ODk2ZA==', '_blank')"><i class="fab fa-instagram"></i> Instagram</button>
+            <button onclick="window.open('https://www.linkedin.com/in/mohmmad-albaitam-07934630a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')"><i class="fab fa-linkedin-in"></i> LinkedIn</button>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const welcomeScreen = document.getElementById("welcome-screen");
+    const mainContent = document.getElementById("main-content");
+
+    setTimeout(() => {
+        welcomeScreen.style.opacity = "0";
+        welcomeScreen.style.transition = "opacity 1s ease";
+
+        setTimeout(() => {
+            welcomeScreen.style.display = "none";
+            mainContent.style.display = "block";
+            mainContent.classList.add("animated-box");
+        }, 1000);
+    }, 3000);
+});
+
+        setTimeout(() => {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            const mainContent = document.getElementById('main-content');
+            const skillsList = document.querySelector('.skills-list');
+
+      
+            welcomeScreen.style.opacity = '0';
+            welcomeScreen.style.transition = 'opacity 1s ease';
+            setTimeout(() => {
+                welcomeScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+
+            
+                mainContent.style.opacity = '0';
+                mainContent.style.transform = 'translateY(30px)';
+                mainContent.style.transition = 'opacity 1s ease, transform 1s ease';
+
+   
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                    mainContent.style.transform = 'translateY(0)';
+
+                    skillsList.style.display = 'block';
+                    skillsList.style.opacity = '0';
+                    skillsList.style.transform = 'translateY(10px)';
+                    skillsList.style.transition = 'opacity 1s ease, transform 1s ease';
+
+                    setTimeout(() => {
+                        skillsList.style.opacity = '1';
+                        skillsList.style.transform = 'translateY(0)';
+                    }, 500);
+                }, 1000);
+            }, 1000);
+        }, 3000);
+    </script>
+</body>
+</html>
